@@ -12,7 +12,10 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'web', '51.250.71.93']
 
-CSRF_TRUSTED_ORIGINS = ['http://localhost', 'http://web', 'http://51.250.71.93']
+CSRF_TRUSTED_ORIGINS = ['http://localhost',
+                        'http://web',
+                        'http://51.250.71.93',
+                        ]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -72,7 +75,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 
-
 DATABASES = {
     'default': {
         'ENGINE': os.getenv('DB_ENGINE'),
@@ -83,8 +85,6 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT')
     }
 }
-
-
 
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -103,7 +103,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-
 LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
@@ -111,7 +110,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 
 STATIC_URL = 'static/'
