@@ -15,4 +15,26 @@
 
 ### Как развернуть проект на удаленном сервере
 
-.....
+- Склонировать репозиторий
+```commandline
+git clone
+```
+- В директории infra переименовать файл env.example -> .env и изменить переменные окружения. 
+- Для работы с проектом локально необходимо установить Docker и Docker-compose и выполнить команды для сборки контейнеров:
+
+```commandline
+cd infra
+docker-compose up -d --build
+```
+- Для работы с проектом на сервере необходимо установить Docker и Docker-compose. 
+ 
+- Внутри контейнера необходимо выполнить миграции и собрать статику приложения, по необходимости создать суперюзера:
+```commandline
+docker container exec -it <CONTAINER ID> bash
+python manage.py makemigrations
+python manage.py migrate
+python manage.py collectstatic  --no-input
+python manage.py createsuperuser
+```
+### Документация
+Документация доступна по адресу: http://your-ip/api/docs/redoc/
