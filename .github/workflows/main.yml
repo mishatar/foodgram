@@ -1,9 +1,6 @@
 name: FOODGRAM-PROJECT
 
-on: 
-  push:
-    branches:
-    - dev
+on: [push]
 
 jobs:
   tests:
