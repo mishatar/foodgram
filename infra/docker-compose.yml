@@ -9,8 +9,7 @@ services:
       - ./.env
   
   web:
-    # image: mishatar26/backend:latest
-    build: ../backend
+    image: mishatar26/backend:latest
     restart: always
     volumes:
       - static_value:/app/static/
@@ -21,8 +20,7 @@ services:
       - ./.env
 
   frontend:
-    # image: mishatar26/frontend:latest
-    build: ../frontend
+    image: mishatar26/frontend:latest
     volumes:
       - ../frontend/:/app/result_build/
     depends_on:
