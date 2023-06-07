@@ -41,7 +41,7 @@ jobs:
             file: backend/Dockerfile
             context: backend/
             push: true
-            tags: podlev/backend
+            tags: mishatar26/backend
 
   deploy:
       runs-on: ubuntu-latest
