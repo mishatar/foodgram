@@ -72,6 +72,12 @@ sudo docker compose exec backend python manage.py createsuperuser
 sudo docker compose exec backend python manage.py collectstatic --noinput
 ```
 
+- Наполнить базу данных содержимым из файлов:
+```
+sudo docker compose exec web python manage.py load_ingredients
+sudo docker compose exec web python manage.py load_tags
+```
+
 ### После каждого обновления репозитория (push в ветку master) будет происходить:
 - Проверка кода на соответствие стандарту PEP8 (с помощью пакета flake8)
 - Сборка и доставка докер-образов frontend и backend на Docker Hub
