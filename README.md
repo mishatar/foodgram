@@ -19,7 +19,6 @@
 ```commandline
 git clone
 ```
-- В директории infra переименовать файл env.example -> .env и изменить переменные окружения. 
 - Для работы с проектом локально необходимо установить Docker и Docker-compose и выполнить команды для сборки контейнеров:
 
 ```commandline
@@ -36,5 +35,3 @@ python manage.py migrate
 python manage.py collectstatic  --no-input
 python manage.py createsuperuser
 ```
-### Документация
-Документация доступна по адресу: http://your-ip/api/docs/redoc/
