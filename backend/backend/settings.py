@@ -10,11 +10,11 @@ SECRET_KEY = get_random_secret_key()
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'web', '51.250.71.93']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'web', '158.160.111.42']
 
 CSRF_TRUSTED_ORIGINS = ['http://localhost',
                         'http://web',
-                        'http://51.250.71.93',
+                        'http://158.160.111.42',
                         ]
 
 INSTALLED_APPS = [
