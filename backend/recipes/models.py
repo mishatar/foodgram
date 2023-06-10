@@ -1,7 +1,7 @@
 from colorfield.fields import ColorField
 from django.contrib.auth import get_user_model
 from django.db import models
-from recipes.validation import validate_even, validate_mark
+from recipes.validation import validate_mark
 
 User = get_user_model()
 
