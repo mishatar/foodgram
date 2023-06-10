@@ -1,7 +1,7 @@
 from colorfield.fields import ColorField
 from django.contrib.auth import get_user_model
 from django.db import models
-from recipes.validation import validate_even
+from recipes.validation import validate_even, validate_mark
 
 User = get_user_model()
 
@@ -52,7 +52,7 @@ class Recipe(models.Model):
         verbose_name='Название',
         max_length=255,
         unique=True,
-        validators=[validate_even]
+        validators=[validate_mark]
     )
     text = models.TextField(
         verbose_name='Описание'
