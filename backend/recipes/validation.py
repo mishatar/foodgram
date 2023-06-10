@@ -9,6 +9,7 @@ def validate_even(value):
             params={'value': value},
         )
 
+
 def validate_mark(value):
     if not value.isalpha():
         raise ValidationError(
