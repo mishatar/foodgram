@@ -1,9 +1,6 @@
 from colorfield.fields import ColorField
-from django.contrib.auth import get_user_model
 from django.db import models
-from recipes.validation import validate_mark
-
-User = get_user_model()
+from users.models import User
 
 
 class Tag(models.Model):
@@ -52,7 +49,6 @@ class Recipe(models.Model):
         verbose_name='Название',
         max_length=255,
         unique=True,
-        validators=[validate_mark]
     )
     text = models.TextField(
         verbose_name='Описание'
